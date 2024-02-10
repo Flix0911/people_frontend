@@ -1,4 +1,4 @@
-import { Link, useLoaderData } from "react-router-dom"
+import { Link, useLoaderData, Form } from "react-router-dom"
 
 const Landing = () => {
     const people = useLoaderData()
@@ -9,6 +9,14 @@ const Landing = () => {
 
     return(
     <div>
+        <h3>Create a person</h3>
+        <Form action="/create" method="post">
+                <input type='input' name='name' placeholder="person's name"/>
+                <input type='input' name='image' placeholder="person's picture"/>
+                <input type='input' name='title' placeholder="person's title"/>
+                <input type='submit' value={'create person'}/>
+        </Form>
+
         <h3>People</h3>
         {people.map(person => {
             return(
