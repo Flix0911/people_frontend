@@ -1,4 +1,5 @@
 import { useLoaderData, Form } from "react-router-dom";
+import '../index.css'
 
 const Show = () => {
     const person = useLoaderData()

@@ -1,5 +1,6 @@
 import { Link, useLoaderData, Form } from "react-router-dom"
 
+
 const Landing = () => {
     const people = useLoaderData()
     console.log(people)
